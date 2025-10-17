@@ -1,0 +1,11 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\LenovoSoftstore\Install\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling esp.c...
+..\HARDWARE\USART\esp.c(101): warning:  #192-D: unrecognized character escape sequence
+  	esp_Cmd("AT+MQTTPUB=0,\"$sys/0S43la9qNI/LED/thing/property/post\",\"{\\\"id\\\":\\\"123\\\"\\\,\\\"params\\\":{\\\"LightSwitch\\\":{\\\"value\\\":true}}}\",0,0", "success");
+..\HARDWARE\USART\esp.c: 1 warning, 0 errors
+linking...
+Program Size: Code=3500 RO-data=564 RW-data=52 ZI-data=1716  
+FromELF: creating hex file...
+"..\OBJ\target.axf" - 0 Error(s), 1 Warning(s).
+Build Time Elapsed:  00:00:01

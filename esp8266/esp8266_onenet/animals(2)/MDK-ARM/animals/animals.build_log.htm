@@ -1,0 +1,196 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ��Vision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 shiming, 1, LIC=HN0AE-54KS8-RAJDM-XW5T7-XNR0T-9HA3H
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  E:\stm32_KEIL5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+E:\Desktop\esp8266\esp8266_onenet\animals(2)\MDK-ARM\animals.uvprojx
+Project File Date:  05/13/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'E:\stm32_KEIL5\ARM\ARMCLANG\Bin'
+Build target 'animals'
+compiling adc.c...
+../Core/Src/main.c(146): warning: passing 'char [10]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        HAL_UART_Receive_IT(&huart2,k210_str,1);
+                                    ^~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_uart.h(752): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+                                                                          ^
+../Core/Src/main.c(153): warning: passing 'char [12]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        OLED_ShowString(0,2,"Waiting....",16);
+                            ^~~~~~~~~~~~~
+../BSP/OLED\oled.h(38): note: passing argument to parameter 'p' here
+void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);     
+                                    ^
+../Core/Src/main.c(154): warning: implicit declaration of function 'APP_Data_Init' is invalid in C99 [-Wimplicit-function-declaration]
+        APP_Data_Init();
+        ^
+../Core/Src/main.c(196): warning: passing 'char [4]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        OLED_ShowString(0,7,"cat",8);
+                                            ^~~~~
+../BSP/OLED\oled.h(38): note: passing argument to parameter 'p' here
+void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);     
+                                    ^
+../Core/Src/main.c(210): warning: implicit declaration of function 'Step_MOTOR_Start' is invalid in C99 [-Wimplicit-function-declaration]
+                                Step_MOTOR_Start(10,1); 
+                                ^
+../Core/Src/main.c(219): warning: implicit declaration of function 'Step_MOTOR_Stop' is invalid in C99 [-Wimplicit-function-declaration]
+                                Step_MOTOR_Stop();//电机停止
+                                ^
+../Core/Src/main.c(239): warning: passing 'char [4]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        OLED_ShowString(0,7,"dog",8);
+                                            ^~~~~
+../BSP/OLED\oled.h(38): note: passing argument to parameter 'p' here
+void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);     
+                                    ^
+../Core/Src/main.c(252): warning: implicit declaration of function 'r_Step_MOTOR_Start' is invalid in C99 [-Wimplicit-function-declaration]
+                                r_Step_MOTOR_Start(50,1);       
+                                ^
+../Core/Src/main.c(261): warning: implicit declaration of function 'r_Step_MOTOR_Stop' is invalid in C99 [-Wimplicit-function-declaration]
+                                r_Step_MOTOR_Stop();//电机停止
+                                ^
+../Core/Src/main.c(283): warning: implicit declaration of function 'Step_MOTOR_Stop' is invalid in C99 [-Wimplicit-function-declaration]
+                        Step_MOTOR_Stop();//电机停止
+                        ^
+../Core/Src/main.c(284): warning: implicit declaration of function 'r_Step_MOTOR_Stop' is invalid in C99 [-Wimplicit-function-declaration]
+                        r_Step_MOTOR_Stop();//电机停止
+                        ^
+../Core/Src/main.c(288): warning: implicit declaration of function 'show_str' is invalid in C99 [-Wimplicit-function-declaration]
+                show_str(Cat_weight,Dog_weight,water_data,Data[2]);
+                ^
+../Core/Src/main.c(366): warning: passing 'char [10]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        HAL_UART_Receive_IT(&huart2, k210_str, 1);
+                                     ^~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_uart.h(752): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+                                                                          ^
+13 warnings generated.
+compiling main.c...
+compiling stm32f1xx_hal_adc_ex.c...
+compiling stm32f1xx_hal.c...
+compiling dma.c...
+compiling tim.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_hal_msp.c...
+compiling gpio.c...
+compiling stm32f1xx_it.c...
+compiling usart.c...
+compiling i2c.c...
+compiling stm32f1xx_hal_adc.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_exti.c...
+compiling stm32f1xx_hal_flash.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling bujin.c...
+compiling dht11.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_uart.c...
+../BSP/Onenet/Onenet.c(137): warning: passing 'const unsigned char *' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        HAL_UART_Transmit(&huart1,Recv_Data,strlen(Recv_Data),0x200);
+                                                   ^~~~~~~~~
+E:\stm32_KEIL5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+../BSP/Onenet/Onenet.c(154): warning: passing 'char [20]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        OLED_ShowString(25,7,str,8);
+                             ^~~
+../BSP/OLED\oled.h(38): note: passing argument to parameter 'p' here
+void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);     
+                                    ^
+../BSP/Onenet/Onenet.c(164): warning: passing 'char [20]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        OLED_ShowString(0,6,str,8);
+                            ^~~
+../BSP/OLED\oled.h(38): note: passing argument to parameter 'p' here
+void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);     
+                                    ^
+../BSP/Onenet/Onenet.c(173): warning: passing 'char [20]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+       OLED_ShowString(72,6,str,8);
+                            ^~~
+../BSP/OLED\oled.h(38): note: passing argument to parameter 'p' here
+void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);     
+                                    ^
+../BSP/Onenet/Onenet.c(183): warning: passing 'char [20]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        OLED_ShowString(83,7,str,8);
+                             ^~~
+../BSP/OLED\oled.h(38): note: passing argument to parameter 'p' here
+void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);     
+                                    ^
+5 warnings generated.
+compiling Onenet.c...
+compiling HX711.c...
+compiling oled.c...
+../BSP/OLED/show.c(9): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+        sprintf(str2,"Cw: %dg  ",food_data1);
+        ^
+../BSP/OLED/show.c(9): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+../BSP/OLED/show.c(9): warning: passing 'uint8_t [100]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        sprintf(str2,"Cw: %dg  ",food_data1);
+                ^~~~
+../BSP/OLED/show.c(11): warning: passing 'uint8_t [100]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        sprintf(str3,"Dw: %dg  ",food_data2);
+                ^~~~
+../BSP/OLED/show.c(21): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        OLED_ShowString(110,2,"mm",16);
+                              ^~~~
+../BSP/OLED/oled.h(38): note: passing argument to parameter 'p' here
+void OLED_ShowString(u8 x,u8 y, u8 *p,u8 Char_Size);     
+                                    ^
+4 warnings generated.
+compiling show.c...
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_i2c.c...
+linking...
+Program Size: Code=24096 RO-data=2780 RW-data=1364 ZI-data=3380  
+FromELF: creating hex file...
+"animals\animals.axf" - 0 Error(s), 22 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_animals
+  E:\stm32_KEIL5\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  E:\stm32_KEIL5\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
